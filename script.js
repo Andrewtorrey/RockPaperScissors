@@ -11,7 +11,7 @@ return "scissors"}
 console.log(getComputerChoice())
 
 function getHumanChoice(){
-let HumanChoice = prompt("rock, paper, or scissors?")
+let HumanChoice = prompt("rock, paper, or scissors?").toLowerCase();
 if (HumanChoice === "rock"){
     return "rock"
 } if (HumanChoice === "paper"){
@@ -26,7 +26,7 @@ var humanscore = 0
 var computerscore = 0
 
 function playround(HumanChoice, ComputerChoice) {
-if (HumanChoice === ComputerChoice) {
+if (HumanChoice === ComputerChoice) {   
     return "It's a tie!"
 }
 if (HumanChoice === "rock" && ComputerChoice === "scissors") {
@@ -47,5 +47,6 @@ if (HumanChoice === "paper" && ComputerChoice === "scissors") {
 if (HumanChoice === "scissors" && ComputerChoice === "rock") {
     return "You lose! Rock beats Scissors"
 }
+
 }
 console.log(playround())
